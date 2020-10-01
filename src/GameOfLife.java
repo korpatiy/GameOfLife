@@ -1,4 +1,4 @@
-package Core;
+import Core.Grid;
 
 import java.util.Scanner;
 
@@ -9,9 +9,10 @@ public class GameOfLife {
         int s = scanner.nextInt();
         int m = scanner.nextInt();
         Grid grid = new Grid(n, s);
-
-
         grid.displayGrid();
-
+        for (int i = 0; i < m; i++) {
+            grid.updateGeneration();
+            grid.displayGrid();
+        }
     }
 }
