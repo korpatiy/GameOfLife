@@ -1,4 +1,4 @@
-package Core;
+package life;
 
 import java.util.Random;
 
@@ -9,10 +9,10 @@ public class Grid {
     private int height;
     private int width;
 
-    public Grid(int size, int s) {
+    public Grid(int size) {
         height = width = size;
         grid = new Cell[height][width];
-        Random random = new Random(s);
+        Random random = new Random();
         for (int h = 0; h < height; h++)
             for (int w = 0; w < width; w++) {
                 grid[h][w] = new Cell();
@@ -31,17 +31,13 @@ public class Grid {
         return height;
     }
 
-    public void displayGrid() {
-        for (int h = 0; h < height; h++) {
-            for (int w = 0; w < width; w++) {
+    public int getAlive() {
+        int count = 0;
+        for (int h = 0; h < height; h++)
+            for (int w = 0; w < width; w++)
                 if (grid[h][w].getState())
-                    System.out.print('O');
-                else
-                    System.out.print(' ');
-            }
-            System.out.println();
-        }
-        //System.out.println("nextGen");
+                    count++;
+        return count;
     }
 
     public void updateGeneration() {
