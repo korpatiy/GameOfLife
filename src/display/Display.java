@@ -4,6 +4,8 @@ import life.Cell;
 
 import java.io.IOException;
 
+//comments to check
+
 public class Display {
     private Cell[][] grid;
     private static int gen = 0;
