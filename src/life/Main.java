@@ -1,6 +1,6 @@
 package life;
 
-import Display.Display;
+import display.Display;
 
 import java.util.Scanner;
 
