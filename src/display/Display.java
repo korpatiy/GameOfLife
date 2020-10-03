@@ -5,6 +5,9 @@ import life.Cell;
 import java.io.IOException;
 
 //comments to check
+//Hello
+//Hello
+//Hello
 
 public class Display {
     private Cell[][] grid;
